@@ -3,3 +3,6 @@ node_modules/
 .gh_login.log
 package-lock.json
 package.json
+
+.vercel
+.env*

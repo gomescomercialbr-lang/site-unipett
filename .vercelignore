@@ -1,0 +1,5 @@
+assets/source/
+scripts/
+.scratch/
+.gh_login.log
+node_modules/

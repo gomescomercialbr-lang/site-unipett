@@ -1,0 +1,5 @@
+node_modules/
+.scratch/
+.gh_login.log
+package-lock.json
+package.json

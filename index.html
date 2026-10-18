@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Unipett | Hospital Veterinário 24h em Manaus – Coroado</title>
+<meta name="description" content="Hospital veterinário 24 horas no Coroado, Manaus. Emergência, internação, banco de sangue, vacinas, banho e tosa e petshop completo no mesmo endereço, todos os dias.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://site-unipett.vercel.app/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="business.business">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:title" content="Unipett | Hospital Veterinário 24h em Manaus">
+<meta property="og:description" content="Emergência, internação, banco de sangue e petshop completo, 24 horas por dia, todos os dias, no Coroado, Manaus.">
+<meta property="og:url" content="https://site-unipett.vercel.app/">
+<meta property="og:image" content="https://site-unipett.vercel.app/assets/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="/assets/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon-192.png">
+<link rel="apple-touch-icon" href="/assets/favicon-180.png">
+<link rel="preload" as="image" href="/assets/logo-icon.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="preload" as="image" href="/assets/hero.webp">
+<link rel="preload" as="image" href="/assets/frames/frame-001.webp">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VeterinaryCare",
+  "name": "Unipett – Hospital Veterinário 24h",
+  "image": "https://site-unipett.vercel.app/assets/og-image.jpg",
+  "url": "https://site-unipett.vercel.app/",
+  "telephone": "+5592984038779",
+  "priceRange": "$$",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Av. Cosme Ferreira, 386",
+    "addressLocality": "Manaus",
+    "addressRegion": "AM",
+    "postalCode": "69082-230",
+    "addressCountry": "BR"
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+      "opens": "00:00",
+      "closes": "23:59"
+    }
+  ],
+  "sameAs": ["https://instagram.com/unipett24h"]
+}
+</script>
+
+<style>
+  :root{
+    --cream:#FAF3E6;
+    --cream-2:#F3E8D8;
+    --brown:#2A1F1A;
+    --brown-soft:#5A4A40;
+    --pink:#EC6FA9;
+    --pink-dark:#D85090;
+    --teal:#16AFA8;
+    --teal-dark:#0E8F89;
+    --radius:18px;
+    --maxw:1180px;
+    --shadow:0 10px 30px rgba(42,31,26,0.12);
+    font-size:16px;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    background:var(--cream);
+    color:var(--brown);
+    font-family:'Inter',sans-serif;
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  h1,h2,h3{
+    font-family:'Fraunces',serif;
+    font-weight:700;
+    line-height:1.12;
+    margin:0 0 .5em;
+    color:var(--brown);
+  }
+  p{margin:0 0 1em;}
+  a{color:inherit;text-decoration:none;}
+  img{display:block;max-width:100%;}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 20px;}
+  .visually-hidden{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;}
+
+  /* Buttons */
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:8px;
+    font-family:'Inter',sans-serif;font-weight:700;font-size:1rem;
+    padding:15px 26px;border-radius:999px;border:none;cursor:pointer;
+    min-height:52px;line-height:1;white-space:nowrap;transition:transform .15s ease, box-shadow .15s ease;
+  }
+  .btn:active{transform:scale(0.97);}
+  .btn-primary{background:var(--teal);color:#fff;box-shadow:0 8px 20px rgba(22,175,168,0.35);}
+  .btn-primary:hover{background:var(--teal-dark);}
+  .btn-secondary{background:#fff;color:var(--brown);border:2px solid var(--brown);}
+  .btn-secondary:hover{background:var(--brown);color:#fff;}
+  .btn-pink{background:var(--pink);color:#fff;box-shadow:0 8px 20px rgba(236,111,169,0.35);}
+  .btn-pink:hover{background:var(--pink-dark);}
+  .btn-outline-teal{background:transparent;color:var(--teal-dark);border:2px solid var(--teal);}
+  .btn-outline-teal:hover{background:var(--teal);color:#fff;}
+  .btn-sm{padding:10px 18px;font-size:.9rem;min-height:44px;}
+
+  /* Header */
+  header.site-header{
+    position:fixed;top:0;left:0;right:0;z-index:100;
+    background:rgba(250,243,230,0.92);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid rgba(42,31,26,0.08);
+  }
+  .header-inner{
+    max-width:var(--maxw);margin:0 auto;padding:12px 20px;
+    display:flex;align-items:center;justify-content:space-between;gap:12px;
+  }
+  .brand{display:flex;align-items:center;gap:10px;min-width:0;}
+  .brand-icon{height:36px;width:auto;flex-shrink:0;}
+  .brand-name{
+    font-family:'Fraunces',serif;font-weight:700;font-size:1.4rem;color:var(--brown);
+    white-space:nowrap;
+  }
+  .badge-24{
+    background:var(--pink);color:#fff;font-weight:700;font-size:.72rem;
+    padding:4px 10px;border-radius:999px;letter-spacing:.04em;white-space:nowrap;
+  }
+  .header-cta{display:none;}
+  @media (min-width:640px){ .header-cta{display:inline-flex;} }
+
+  main{padding-top:64px;}
+
+  /* Hero */
+  .hero{position:relative;padding:40px 0 0;}
+  .hero-inner{max-width:var(--maxw);margin:0 auto;padding:0 20px 28px;text-align:center;}
+  .hero h1{font-size:clamp(2rem,6vw,3.3rem);max-width:14ch;margin:0 auto .5em;}
+  .hero-sub{font-size:1.1rem;color:var(--brown-soft);max-width:46ch;margin:0 auto 1.5em;}
+  .hero-actions{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;margin-bottom:8px;}
+  .hero-media{position:relative;width:100%;}
+  .hero-media img{width:100%;height:auto;display:block;}
+  .hero-media::after{
+    content:"";position:absolute;inset:0;
+    background:linear-gradient(to bottom, rgba(250,243,230,0) 55%, rgba(250,243,230,0.95) 100%);
+  }
+
+  /* Explosion section */
+  .explosion-section{position:relative;height:340vh;background:var(--cream);}
+  .explosion-sticky{
+    position:sticky;top:0;height:100vh;overflow:hidden;
+    display:flex;align-items:center;justify-content:center;background:var(--cream-2);
+  }
+  #explosion-canvas{width:100%;height:100%;display:block;object-fit:cover;}
+  .explosion-video{width:100%;height:100%;object-fit:cover;display:block;}
+  .explosion-loading{
+    position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
+    font-family:'Fraunces',serif;font-size:1.4rem;color:var(--brown);
+    background:var(--cream-2);transition:opacity .4s ease;z-index:5;
+  }
+  .explosion-loading.is-hidden{opacity:0;pointer-events:none;}
+  .explosion-caption{
+    position:absolute;left:50%;bottom:12%;transform:translateX(-50%);
+    width:min(90%,560px);text-align:center;
+    background:rgba(250,243,230,0.92);
+    border-radius:var(--radius);
+    padding:18px 26px;box-shadow:var(--shadow);
+    font-family:'Fraunces',serif;font-weight:600;font-size:clamp(1.1rem,3.2vw,1.6rem);
+    color:var(--brown);opacity:0;transition:opacity .35s ease;
+    z-index:4;
+  }
+  .explosion-caption.is-active{opacity:1;}
+  .explosion-static{display:none;}
+  .reduced-motion .explosion-sticky > #explosion-canvas,
+  .reduced-motion .explosion-sticky > .explosion-video{display:none;}
+  .reduced-motion .explosion-section{height:auto;}
+  .reduced-motion .explosion-sticky{position:relative;height:auto;display:block;padding:40px 0;}
+  .reduced-motion .explosion-static{display:block;}
+  .reduced-motion .explosion-static img{width:100%;border-radius:var(--radius);margin-bottom:24px;}
+  .reduced-motion .explosion-caption{
+    position:static;transform:none;width:auto;opacity:1;margin:0 auto 14px;max-width:560px;
+  }
+
+  @media (max-width:820px){
+    #explosion-canvas{display:none;}
+  }
+  @media (min-width:821px){
+    .explosion-video{display:none;}
+  }
+
+  /* Services grid */
+  .section{padding:70px 0;}
+  .section-title{text-align:center;max-width:620px;margin:0 auto 42px;}
+  .section-title h2{font-size:clamp(1.7rem,4vw,2.4rem);}
+  .section-title p{color:var(--brown-soft);font-size:1.05rem;}
+
+  .grid{
+    display:grid;gap:22px;
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  }
+  .card{
+    background:#fff;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);
+    display:flex;flex-direction:column;
+  }
+  .card img{width:100%;aspect-ratio:4/3;object-fit:cover;}
+  .card-body{padding:20px 22px 24px;}
+  .card-body h3{font-size:1.2rem;margin-bottom:.35em;}
+  .card-body p{color:var(--brown-soft);font-size:.96rem;margin:0;}
+  .card.card-text{justify-content:center;}
+  .card-text .card-body{padding-top:0;}
+  .card-icon{
+    width:52px;height:52px;border-radius:50%;background:var(--pink);
+    display:flex;align-items:center;justify-content:center;margin:0 0 0 22px;
+    color:#fff;font-size:1.4rem;font-weight:700;flex-shrink:0;
+  }
+  .card.card-text.teal .card-icon{background:var(--teal);}
+
+  /* Trust block */
+  .trust{background:var(--cream-2);}
+  .trust-grid{
+    display:grid;gap:30px;grid-template-columns:1fr;
+    align-items:center;
+  }
+  @media (min-width:860px){ .trust-grid{grid-template-columns:1.1fr .9fr;} }
+  .trust-card{
+    background:#fff;border-radius:var(--radius);padding:30px 28px;box-shadow:var(--shadow);
+  }
+  .trust-card h3{font-size:1.3rem;margin-bottom:.6em;}
+  .trust-row{display:flex;gap:12px;margin-bottom:14px;align-items:flex-start;}
+  .trust-row strong{display:block;font-size:.95rem;}
+  .trust-row span{color:var(--brown-soft);font-size:.92rem;}
+  .google-rating{
+    display:flex;align-items:center;gap:10px;margin-bottom:18px;flex-wrap:wrap;
+  }
+  .stars{color:var(--pink);font-size:1.2rem;letter-spacing:2px;}
+  .rating-number{font-weight:700;font-size:1.1rem;}
+
+  /* Closing CTA */
+  .closing{
+    background:linear-gradient(135deg,var(--teal) 0%, var(--teal-dark) 100%);
+    color:#fff;text-align:center;padding:80px 0;
+  }
+  .closing h2{color:#fff;font-size:clamp(1.8rem,4.5vw,2.6rem);max-width:18ch;margin:0 auto .4em;}
+  .closing p{color:rgba(255,255,255,0.9);max-width:46ch;margin:0 auto 1.6em;font-size:1.05rem;}
+  .closing .btn-primary{background:#fff;color:var(--teal-dark);}
+  .closing .btn-primary:hover{background:var(--cream);}
+
+  /* Footer */
+  footer{background:var(--brown);color:var(--cream);padding:50px 0 30px;}
+  .footer-inner{display:grid;gap:28px;grid-template-columns:1fr;}
+  @media (min-width:700px){ .footer-inner{grid-template-columns:1.3fr 1fr 1fr;} }
+  footer .brand-name{color:var(--cream);font-size:1.3rem;}
+  .footer-logo{
+    background:var(--cream);border-radius:14px;padding:12px 16px;
+    width:150px;height:auto;
+  }
+  footer h4{font-family:'Inter',sans-serif;font-size:.8rem;text-transform:uppercase;letter-spacing:.08em;color:var(--pink);margin:0 0 10px;}
+  footer p, footer a{color:rgba(250,243,230,0.85);font-size:.95rem;}
+  footer a:hover{color:#fff;text-decoration:underline;}
+  .footer-bottom{
+    margin-top:36px;padding-top:20px;border-top:1px solid rgba(250,243,230,0.15);
+    font-size:.82rem;color:rgba(250,243,230,0.6);text-align:center;
+  }
+
+  /* Floating WhatsApp */
+  .float-wa{
+    position:fixed;right:18px;bottom:18px;z-index:200;
+    width:60px;height:60px;border-radius:50%;background:var(--teal);
+    display:flex;align-items:center;justify-content:center;
+    box-shadow:0 10px 24px rgba(22,175,168,0.45);
+  }
+  .float-wa svg{width:30px;height:30px;}
+  .float-wa:hover{background:var(--teal-dark);}
+
+  @media (max-width:480px){
+    .hero-actions{flex-direction:column;align-items:stretch;}
+    .btn{width:100%;}
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="#top" class="brand" aria-label="Unipett - Hospital Veterinário 24h">
+      <img src="/assets/logo-icon.png" alt="" width="40" height="36" class="brand-icon">
+      <span class="brand-name">Unipett</span>
+      <span class="badge-24">24h</span>
+    </a>
+    <a class="btn btn-primary btn-sm header-cta" id="wa-header"
+       href="https://wa.me/5592984038779?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Unipett%20e%20gostaria%20de%20atendimento."
+       target="_blank" rel="noopener">Chamar no WhatsApp</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-inner">
+      <h1>Seu pet cuidado a qualquer hora. Até às 3 da manhã.</h1>
+      <p class="hero-sub">Hospital veterinário 24 horas no Coroado, em Manaus. Emergência, internação, banco de sangue e petshop completo, debaixo do mesmo teto, todos os dias do ano.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary"
+           href="https://wa.me/5592984038779?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Unipett%20e%20gostaria%20de%20atendimento."
+           target="_blank" rel="noopener">Chamar no WhatsApp</a>
+        <a class="btn btn-secondary" href="tel:+5592984038779">Emergência: ligar agora</a>
+      </div>
+    </div>
+    <div class="hero-media">
+      <img src="/assets/hero.webp" alt="Filhote de golden retriever deitado em fundo claro, cuidado pela equipe da Unipett" width="1920" height="1080" fetchpriority="high">
+    </div>
+  </section>
+
+  <!-- EXPLOSION -->
+  <section class="explosion-section" id="explosion" aria-label="Apresentação dos serviços da Unipett">
+    <div class="explosion-sticky">
+      <canvas id="explosion-canvas" aria-hidden="true"></canvas>
+      <video class="explosion-video" muted loop playsinline autoplay
+             poster="/assets/hero.webp" aria-hidden="true">
+        <source src="/assets/video-mobile.mp4" type="video/mp4">
+      </video>
+      <div class="explosion-loading" id="explosion-loading">Carregando 0%</div>
+
+      <p class="explosion-caption" data-step="0">Aberto 24 horas, todos os dias</p>
+      <p class="explosion-caption" data-step="1">Emergência e internação</p>
+      <p class="explosion-caption" data-step="2">Banco de sangue e tratamento de doenças virais</p>
+      <p class="explosion-caption" data-step="3">Petshop, banho e tosa no mesmo lugar</p>
+
+      <div class="explosion-static">
+        <img src="/assets/hero.webp" alt="Equipe Unipett cuidando de um pet" width="1920" height="1080">
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="section" id="servicos">
+    <div class="wrap">
+      <div class="section-title">
+        <h2>Tudo que seu pet precisa, no mesmo endereço</h2>
+        <p>Da emergência de madrugada ao banho de sábado: a Unipett resolve.</p>
+      </div>
+
+      <div class="grid">
+        <article class="card card-text">
+          <div class="card-icon" aria-hidden="true">+</div>
+          <div class="card-body">
+            <h3>Emergência 24h</h3>
+            <p>Toda hora é hora de levar seu pet se algo não estiver bem. Nossa equipe está de prontidão 24 horas, todos os dias, inclusive feriados.</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="/assets/banho-tosa.webp" alt="Pet sendo preparado para banho e tosa na Unipett" width="800" height="598" loading="lazy">
+          <div class="card-body">
+            <h3>Banho e tosa</h3>
+            <p>Seu pet volta para casa cheiroso, escovado e bem cuidado — sem precisar rodar a cidade atrás de um lugar de confiança.</p>
+          </div>
+        </article>
+
+        <article class="card card-text teal">
+          <div class="card-icon" aria-hidden="true">V</div>
+          <div class="card-body">
+            <h3>Doenças virais</h3>
+            <p>Diagnóstico e tratamento de cinomose, parvovirose e outras doenças virais, com estrutura para internação e acompanhamento intensivo.</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="/assets/brinquedos.webp" alt="Brinquedos coloridos disponíveis no petshop da Unipett" width="800" height="598" loading="lazy">
+          <div class="card-body">
+            <h3>Brinquedos</h3>
+            <p>Linha completa de brinquedos para toda hora de brincadeira, já na hora que você vier buscar ou visitar seu pet.</p>
+          </div>
+        </article>
+
+        <article class="card card-text">
+          <div class="card-icon" aria-hidden="true">+</div>
+          <div class="card-body">
+            <h3>Banco de sangue</h3>
+            <p>Bolsas de sangue disponíveis para transfusão na hora da emergência — um diferencial que pode salvar a vida do seu pet.</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="/assets/racao.webp" alt="Sacos de ração para cães e gatos no petshop da Unipett" width="800" height="598" loading="lazy">
+          <div class="card-body">
+            <h3>Ração</h3>
+            <p>As principais marcas de ração para cães e gatos, com orientação de quem acompanha a saúde do seu pet de perto.</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="/assets/caminhas.webp" alt="Gato descansando em caminha à venda na Unipett" width="800" height="598" loading="lazy">
+          <div class="card-body">
+            <h3>Caminhas</h3>
+            <p>Caminhas confortáveis para todos os tamanhos e idades, do filhote ao pet mais idoso.</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="/assets/acessorios.webp" alt="Cachorro beagle usando coleira vendida na Unipett" width="800" height="598" loading="lazy">
+          <div class="card-body">
+            <h3>Acessórios</h3>
+            <p>Coleiras, guias, comedouros e tudo que seu pet precisa no dia a dia, sem sair do bairro.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST -->
+  <section class="section trust" id="confianca">
+    <div class="wrap">
+      <div class="section-title">
+        <h2>Pertinho de você, a qualquer hora</h2>
+      </div>
+      <div class="trust-grid">
+        <div class="trust-card">
+          <div id="google-rating-block"></div>
+          <div class="trust-row">
+            <div>
+              <strong>Endereço</strong>
+              <span>Av. Cosme Ferreira, 386 – Coroado, Manaus/AM, CEP 69082-230 (em frente à Fiat Murano)</span>
+            </div>
+          </div>
+          <div class="trust-row">
+            <div>
+              <strong>Horário</strong>
+              <span>Aberto 24 horas, todos os dias, inclusive feriados</span>
+            </div>
+          </div>
+          <a class="btn btn-outline-teal" target="_blank" rel="noopener"
+             href="https://www.google.com/maps/dir/?api=1&destination=Av.+Cosme+Ferreira%2C+386+-+Coroado%2C+Manaus+-+AM%2C+69082-230">Como chegar</a>
+        </div>
+        <div class="trust-card">
+          <h3>Fale agora com a Unipett</h3>
+          <p style="color:var(--brown-soft);">Chame no WhatsApp e seja atendido por alguém da nossa equipe, a qualquer hora do dia ou da noite.</p>
+          <div style="display:flex;flex-direction:column;gap:12px;">
+            <a class="btn btn-primary"
+               href="https://wa.me/5592984038779?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Unipett%20e%20gostaria%20de%20atendimento."
+               target="_blank" rel="noopener">Chamar no WhatsApp</a>
+            <a class="btn btn-secondary" href="tel:+5592984038779">(92) 98403-8779</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLOSING -->
+  <section class="closing">
+    <div class="wrap">
+      <h2>O único lugar em Manaus com hospital, emergência, banco de sangue e petshop no mesmo endereço.</h2>
+      <p>A qualquer hora do dia ou da noite, a Unipett está de portas abertas para o seu pet.</p>
+      <a class="btn btn-primary"
+         href="https://wa.me/5592984038779?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Unipett%20e%20gostaria%20de%20atendimento."
+         target="_blank" rel="noopener">Chamar no WhatsApp</a>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap footer-inner">
+    <div>
+      <img src="/assets/logo-full.png" alt="Unipett - Hospital Veterinário 24h" width="210" height="189" class="footer-logo" loading="lazy">
+      <p style="margin-top:14px;">Emergência, banco de sangue e petshop completo no Coroado, Manaus.</p>
+    </div>
+    <div>
+      <h4>Contato</h4>
+      <p><a href="tel:+5592984038779">(92) 98403-8779</a></p>
+      <p><a href="https://wa.me/5592984038779" target="_blank" rel="noopener">WhatsApp</a></p>
+      <p><a href="https://instagram.com/unipett24h" target="_blank" rel="noopener">@unipett24h</a></p>
+    </div>
+    <div>
+      <h4>Endereço e horário</h4>
+      <p>Av. Cosme Ferreira, 386 – Coroado<br>Manaus/AM, CEP 69082-230<br>(em frente à Fiat Murano)</p>
+      <p>Aberto 24h, todos os dias</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span id="footer-year">© Unipett</span>
+  </div>
+</footer>
+
+<a class="float-wa" aria-label="Chamar no WhatsApp"
+   href="https://wa.me/5592984038779?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Unipett%20e%20gostaria%20de%20atendimento."
+   target="_blank" rel="noopener">
+  <svg viewBox="0 0 24 24" fill="#fff" aria-hidden="true">
+    <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.87.5 3.63 1.44 5.15L2 22l5.1-1.53a9.8 9.8 0 0 0 4.94 1.33h.01c5.46 0 9.9-4.45 9.9-9.91C21.96 6.45 17.5 2 12.04 2zm5.8 14.08c-.24.68-1.4 1.3-1.95 1.38-.5.08-1.12.11-1.8-.11-.42-.13-.95-.3-1.64-.59-2.88-1.24-4.76-4.14-4.9-4.33-.14-.19-1.17-1.56-1.17-2.97 0-1.41.74-2.1 1-2.39.26-.29.57-.36.76-.36.19 0 .38 0 .55.01.17.01.41-.07.64.49.24.58.81 1.99.88 2.13.07.14.12.31.02.5-.1.19-.15.31-.29.48-.14.17-.3.37-.43.5-.14.14-.29.29-.12.57.17.29.76 1.26 1.63 2.04 1.12 1 2.07 1.31 2.36 1.46.29.14.46.12.63-.07.17-.19.73-.85.93-1.14.19-.29.38-.24.64-.14.26.1 1.65.78 1.93.92.29.14.48.21.55.33.07.12.07.69-.17 1.37z"/>
+  </svg>
+</a>
+
+<script>
+(function(){
+  "use strict";
+
+  /* ---------- Nota do Google ---------- */
+  var NOTA_GOOGLE = "";
+  var TOTAL_AVALIACOES = "";
+
+  var ratingBlock = document.getElementById("google-rating-block");
+  var mapsQuery = encodeURIComponent("Unipett Hospital Veterinário 24h, Av. Cosme Ferreira, 386, Coroado, Manaus - AM");
+  var mapsSearchUrl = "https://www.google.com/maps/search/?api=1&query=" + mapsQuery;
+
+  if (ratingBlock) {
+    if (NOTA_GOOGLE && TOTAL_AVALIACOES) {
+      ratingBlock.innerHTML =
+        '<div class="google-rating">' +
+          '<span class="stars">★★★★★</span>' +
+          '<span class="rating-number">' + NOTA_GOOGLE + '</span>' +
+          '<span style="color:var(--brown-soft);font-size:.9rem;">(' + TOTAL_AVALIACOES + ' avaliações)</span>' +
+        '</div>' +
+        '<p><a class="btn btn-outline-teal btn-sm" target="_blank" rel="noopener" href="' + mapsSearchUrl + '">Veja nossas avaliações no Google</a></p>';
+    } else {
+      ratingBlock.innerHTML =
+        '<p><a class="btn btn-outline-teal btn-sm" target="_blank" rel="noopener" href="' + mapsSearchUrl + '">Veja nossas avaliações no Google</a></p>';
+    }
+  }
+
+  /* ---------- Ano no rodapé ---------- */
+  var yearEl = document.getElementById("footer-year");
+  if (yearEl) { yearEl.textContent = "© Unipett " + new Date().getFullYear(); }
+
+  /* ---------- Bloco da explosão ---------- */
+  var prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (prefersReduced) {
+    document.documentElement.classList.add("reduced-motion");
+    var loadingEl = document.getElementById("explosion-loading");
+    if (loadingEl) loadingEl.remove();
+    document.querySelectorAll(".explosion-caption").forEach(function(el){ el.classList.add("is-active"); });
+    return;
+  }
+
+  var section = document.getElementById("explosion");
+  var canvas = document.getElementById("explosion-canvas");
+  var loadingEl = document.getElementById("explosion-loading");
+  var captions = Array.prototype.slice.call(document.querySelectorAll(".explosion-caption"));
+  var isMobile = window.matchMedia("(max-width: 820px)").matches;
+
+  if (isMobile || !canvas) {
+    if (loadingEl) loadingEl.remove();
+    updateCaptionOnScroll();
+    window.addEventListener("scroll", updateCaptionOnScroll, { passive: true });
+    return;
+  }
+
+  var ctx = canvas.getContext("2d");
+  var TOTAL_FRAMES = 54;
+  var frames = [];
+  var loadedCount = 0;
+  var firstDrawn = false;
+
+  function frameUrl(i){
+    var n = String(i).padStart(3, "0");
+    return "/assets/frames/frame-" + n + ".webp";
+  }
+
+  function resizeCanvas(){
+    var dpr = Math.min(window.devicePixelRatio || 1, 2);
+    var w = section.clientWidth;
+    var h = window.innerHeight;
+    canvas.width = Math.round(w * dpr);
+    canvas.height = Math.round(h * dpr);
+    canvas.style.width = w + "px";
+    canvas.style.height = h + "px";
+  }
+
+  function drawFrame(img){
+    if (!img || !img.complete || !img.naturalWidth) return;
+    var cw = canvas.width, ch = canvas.height;
+    var iw = img.naturalWidth, ih = img.naturalHeight;
+    var scale = Math.max(cw / iw, ch / ih);
+    var sw = cw / scale, sh = ch / scale;
+    var sx = (iw - sw) / 2, sy = (ih - sh) / 2;
+    ctx.drawImage(img, sx, sy, sw, sh, 0, 0, cw, ch);
+    firstDrawn = true;
+  }
+
+  function currentIndexForProgress(p){
+    return Math.min(TOTAL_FRAMES - 1, Math.max(0, Math.floor(p * TOTAL_FRAMES)));
+  }
+
+  var lastIndex = -1;
+  function getProgress(){
+    var rect = section.getBoundingClientRect();
+    var total = section.offsetHeight - window.innerHeight;
+    if (total <= 0) return 0;
+    var p = (-rect.top) / total;
+    return Math.min(1, Math.max(0, p));
+  }
+
+  function updateCaptionOnScroll(){
+    var p = getProgress();
+    var step = Math.min(3, Math.floor(p * 4));
+    captions.forEach(function(el){
+      var s = parseInt(el.getAttribute("data-step"), 10);
+      el.classList.toggle("is-active", s === step);
+    });
+    return step;
+  }
+
+  var ticking = false;
+  function onScroll(){
+    if (ticking) return;
+    ticking = true;
+    requestAnimationFrame(function(){
+      var p = getProgress();
+      var idx = currentIndexForProgress(p);
+      if (idx !== lastIndex && frames[idx] && frames[idx].complete) {
+        drawFrame(frames[idx]);
+        lastIndex = idx;
+      } else if (!firstDrawn && frames[0] && frames[0].complete) {
+        drawFrame(frames[0]);
+      }
+      updateCaptionOnScroll();
+      ticking = false;
+    });
+  }
+
+  resizeCanvas();
+  window.addEventListener("resize", function(){
+    resizeCanvas();
+    if (frames[lastIndex]) drawFrame(frames[lastIndex]);
+  });
+
+  for (var i = 1; i <= TOTAL_FRAMES; i++) {
+    var img = new Image();
+    img.src = frameUrl(i);
+    img.onload = function(){
+      loadedCount++;
+      if (loadingEl) loadingEl.textContent = "Carregando " + Math.round((loadedCount / TOTAL_FRAMES) * 100) + "%";
+      if (!firstDrawn && frames[0] && frames[0].complete) {
+        drawFrame(frames[0]);
+      }
+      if (loadedCount >= TOTAL_FRAMES && loadingEl) {
+        loadingEl.classList.add("is-hidden");
+        setTimeout(function(){ if (loadingEl) loadingEl.remove(); }, 450);
+      }
+    };
+    frames.push(img);
+  }
+
+  window.addEventListener("scroll", onScroll, { passive: true });
+  updateCaptionOnScroll();
+})();
+</script>
+
+</body>
+</html>

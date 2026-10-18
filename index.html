@@ -153,27 +153,23 @@
     position:absolute;inset:0;pointer-events:none;
     background:linear-gradient(to top, var(--cream) 0%, var(--cream) 18%, transparent 55%);
   }
-  .opening-content{position:relative;background:var(--cream);padding:32px 20px 44px;}
-  .opening-content h1{font-size:clamp(1.8rem,7vw,2.6rem);max-width:16ch;margin:0 0 .5em;}
-  .opening-sub{font-size:1.05rem;color:var(--ink-soft);max-width:42ch;margin:0 0 1.3em;}
-  .opening-actions{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:4px;}
-  .opening-call{
-    display:inline-flex;align-items:center;gap:7px;font-weight:600;font-size:.92rem;
-    color:var(--ink-soft);margin:14px 0 20px;
+  .opening-content{
+    position:relative;background:var(--cream);padding:32px 24px 44px;text-align:center;
   }
-  .opening-call svg{width:15px;height:15px;flex-shrink:0;}
-  .opening-call:hover{color:var(--teal-dark);text-decoration:underline;}
-  .opening-badges{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px;}
+  .opening-content h1{font-size:clamp(2.2rem,9vw,2.8rem);line-height:1.05;margin:0 0 .5em;}
+  .opening-sub{font-size:1.05rem;color:var(--ink-soft);max-width:42ch;margin:0 auto 1.3em;}
+  .opening-actions{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;margin-bottom:22px;}
+  .opening-actions .btn{width:100%;max-width:320px;}
+  .opening-badges{
+    list-style:none;margin:0 auto;padding:0;max-width:340px;
+    display:grid;grid-template-columns:repeat(2,1fr);gap:8px;
+  }
   .opening-badge{
-    display:inline-flex;align-items:center;gap:6px;background:#fff;
-    padding:5px 11px;border-radius:999px;font-size:.72rem;font-weight:700;
+    display:inline-flex;align-items:center;justify-content:center;gap:6px;background:#fff;
+    padding:6px 10px;border-radius:999px;font-size:.72rem;font-weight:700;
     color:var(--ink);box-shadow:var(--shadow);
   }
   .opening-badge .dot{width:6px;height:6px;border-radius:50%;background:var(--pink);flex-shrink:0;}
-
-  @media (max-width:480px){
-    .opening-actions .btn{width:100%;}
-  }
 
   @media (min-width:821px){
     .opening{height:100vh;min-height:640px;display:flex;align-items:center;overflow:hidden;}
@@ -181,11 +177,19 @@
     .opening-media video,
     .opening-static-img{object-position:70% center;}
     .opening-gradient{
-      background:linear-gradient(to right, var(--cream) 0%, var(--cream) 30%, transparent 60%);
+      background:linear-gradient(to right, var(--cream) 0%, var(--cream) 38%, transparent 62%);
     }
     .opening-content{
-      position:relative;z-index:2;background:transparent;max-width:560px;
-      padding:0 24px 0 max(24px, calc((100vw - var(--maxw)) / 2 + 24px));
+      position:relative;z-index:2;background:transparent;
+      max-width:clamp(700px, 52vw, 800px);text-align:left;
+      padding:0 24px 0 clamp(64px, 8vw, 160px);
+    }
+    .opening-content h1{font-size:clamp(2.8rem,5.2vw,5rem);line-height:1.05;}
+    .opening-sub{margin:0 0 1.3em;}
+    .opening-actions{justify-content:flex-start;}
+    .opening-actions .btn{width:auto;max-width:none;}
+    .opening-badges{
+      display:flex;flex-wrap:nowrap;justify-content:flex-start;max-width:none;margin:0;
     }
   }
 
@@ -330,11 +334,8 @@
            href="https://wa.me/5592984038779?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Unipett%20e%20gostaria%20de%20atendimento."
            target="_blank" rel="noopener">Chamar no WhatsApp</a>
       </div>
-      <a class="opening-call" href="tel:+5592984038779">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-        ou ligue agora: (92) 98403-8779
-      </a>
       <ul class="opening-badges">
+        <li class="opening-badge"><span class="dot" aria-hidden="true"></span>Hospital veterinário</li>
         <li class="opening-badge"><span class="dot" aria-hidden="true"></span>Aberto 24h</li>
         <li class="opening-badge"><span class="dot" aria-hidden="true"></span>Banco de sangue</li>
         <li class="opening-badge"><span class="dot" aria-hidden="true"></span>Petshop</li>

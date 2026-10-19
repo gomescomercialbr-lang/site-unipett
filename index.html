@@ -3,18 +3,18 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Unipett | Hospital Veterinário 24h em Manaus – Coroado</title>
-<meta name="description" content="Hospital veterinário 24 horas no Coroado, Manaus. Emergência, internação, banco de sangue, vacinas, banho e tosa e petshop completo no mesmo endereço, todos os dias.">
-<meta name="robots" content="index, follow">
-<link rel="canonical" href="https://site-unipett.vercel.app/">
+<title>Clínica Pet Vida | Modelo de site para clínicas e petshops</title>
+<meta name="description" content="Modelo de site para clínicas veterinárias e petshops. Personalize com a marca da sua clínica em config.js.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="https://clinica-pet-vida.vercel.app/">
 
 <!-- Open Graph -->
 <meta property="og:type" content="business.business">
 <meta property="og:locale" content="pt_BR">
-<meta property="og:title" content="Unipett | Hospital Veterinário 24h em Manaus">
-<meta property="og:description" content="Emergência, internação, banco de sangue e petshop completo, 24 horas por dia, todos os dias, no Coroado, Manaus.">
-<meta property="og:url" content="https://site-unipett.vercel.app/">
-<meta property="og:image" content="https://site-unipett.vercel.app/assets/og-image.jpg">
+<meta property="og:title" content="Clínica Pet Vida | Modelo de site">
+<meta property="og:description" content="Modelo de site para clínicas veterinárias e petshops, pronto para personalizar.">
+<meta property="og:url" content="https://clinica-pet-vida.vercel.app/">
+<meta property="og:image" content="https://clinica-pet-vida.vercel.app/assets/og-image.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
@@ -22,7 +22,6 @@
 <link rel="icon" href="/assets/favicon.ico" sizes="32x32">
 <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon-192.png">
 <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
-<link rel="preload" as="image" href="/assets/logo.webp">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -30,22 +29,20 @@
 
 <link rel="preload" as="image" href="/assets/abertura.webp">
 
-<script type="application/ld+json">
+<script type="application/ld+json" id="jsonld">
 {
   "@context": "https://schema.org",
   "@type": "VeterinaryCare",
-  "name": "Unipett – Hospital Veterinário 24h",
-  "description": "Hospital veterinário 24 horas com emergência, internação, banco de sangue, vacinas, banho e tosa e petshop completo no mesmo endereço.",
-  "image": "https://site-unipett.vercel.app/assets/og-image.jpg",
-  "url": "https://site-unipett.vercel.app/",
-  "telephone": "+5592984038779",
+  "name": "Clínica Pet Vida",
+  "description": "Modelo de site para clínicas veterinárias e petshops.",
+  "url": "https://clinica-pet-vida.vercel.app/",
+  "telephone": "+5500000000000",
   "priceRange": "$$",
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "Av. Cosme Ferreira, 386",
-    "addressLocality": "Manaus",
-    "addressRegion": "AM",
-    "postalCode": "69082-230",
+    "streetAddress": "Rua Exemplo, 123",
+    "addressLocality": "Sua Cidade",
+    "addressRegion": "UF",
     "addressCountry": "BR"
   },
   "openingHoursSpecification": [
@@ -56,7 +53,7 @@
       "closes": "23:59"
     }
   ],
-  "sameAs": ["https://instagram.com/unipett24h"]
+  "sameAs": ["https://instagram.com/clinicapetvida"]
 }
 </script>
 
@@ -66,12 +63,12 @@
     --cream-2:#F3E8D8;
     --ink:#201F22;
     --ink-soft:#636267;
-    --pink:#FF75B0;
-    --pink-dark:#AD5078;
-    --pink-darker:#7F3B58;
-    --teal:#01C1C2;
-    --teal-dark:#017F80;
-    --teal-darker:#016061;
+    --destaque:#FF75B0;
+    --destaque-dark:#AD5078;
+    --destaque-darker:#7F3B58;
+    --principal:#01C1C2;
+    --principal-dark:#017F80;
+    --principal-darker:#016061;
     --radius:18px;
     --maxw:1180px;
     --shadow:0 10px 30px rgba(42,31,26,0.12);
@@ -108,21 +105,22 @@
     min-height:52px;line-height:1;white-space:nowrap;transition:transform .15s ease, box-shadow .15s ease;
   }
   .btn:active{transform:scale(0.97);}
-  .btn-primary{background:var(--teal-dark);color:#fff;box-shadow:0 8px 20px rgba(1,127,128,0.35);}
-  .btn-primary:hover{background:var(--teal-darker);}
+  .btn-primary{background:var(--principal-dark);color:#fff;box-shadow:0 8px 20px rgba(1,127,128,0.35);}
+  .btn-primary:hover{background:var(--principal-darker);}
   .btn-secondary{background:#fff;color:var(--ink);border:2px solid var(--ink);}
   .btn-secondary:hover{background:var(--ink);color:#fff;}
-  .btn-pink{background:var(--pink-dark);color:#fff;box-shadow:0 8px 20px rgba(173,80,120,0.35);}
-  .btn-pink:hover{background:var(--pink-darker);}
-  .btn-outline-teal{background:transparent;color:var(--teal-dark);border:2px solid var(--teal-dark);}
-  .btn-outline-teal:hover{background:var(--teal-dark);color:#fff;}
+  .btn-outline{background:transparent;color:var(--principal-dark);border:2px solid var(--principal-dark);}
+  .btn-outline:hover{background:var(--principal-dark);color:#fff;}
   .btn-sm{padding:10px 18px;font-size:.9rem;min-height:44px;}
 
   /* Header */
-  header.site-header{
-    position:fixed;top:0;left:0;right:0;z-index:100;
-    background:rgba(250,243,230,0.92);
-    backdrop-filter:blur(8px);
+  header.site-header{position:fixed;top:0;left:0;right:0;z-index:100;}
+  .demo-banner{
+    background:var(--principal-darker);color:#fff;text-align:center;
+    font-size:.72rem;font-weight:600;padding:6px 12px;
+  }
+  .header-main{
+    background:rgba(250,243,230,0.92);backdrop-filter:blur(8px);
     border-bottom:1px solid rgba(42,31,26,0.08);
   }
   .header-inner{
@@ -130,16 +128,20 @@
     display:flex;align-items:center;justify-content:space-between;gap:12px;
   }
   .brand{display:flex;align-items:center;gap:10px;min-width:0;}
-  .brand-logo{height:44px;width:auto;flex-shrink:0;}
-  @media (min-width:768px){ .brand-logo{height:52px;} }
+  .brand-icon{height:38px;width:38px;flex-shrink:0;}
+  @media (min-width:768px){ .brand-icon{height:46px;width:46px;} }
+  .brand-name{
+    font-family:'Fraunces',serif;font-weight:700;color:var(--ink);
+    font-size:clamp(1rem,3vw,1.35rem);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+  }
   .header-emergency{
     font-weight:600;color:var(--ink-soft);white-space:nowrap;
     font-size:clamp(.66rem,2.6vw,.88rem);transition:color .15s ease;
   }
-  .header-emergency:hover{color:var(--teal-dark);text-decoration:underline;}
+  .header-emergency:hover{color:var(--principal-dark);text-decoration:underline;}
 
-  main{padding-top:64px;}
-  section[id]{scroll-margin-top:76px;}
+  main{padding-top:92px;}
+  section[id]{scroll-margin-top:100px;}
 
   /* Opening (video hero) */
   .opening{position:relative;}
@@ -156,7 +158,7 @@
   .opening-content{
     position:relative;background:var(--cream);padding:32px 24px 44px;text-align:center;
   }
-  .opening-content h1{font-size:clamp(2.2rem,9vw,2.8rem);line-height:1.05;margin:0 0 .5em;}
+  .opening-content h1{font-size:clamp(2.2rem,9vw,2.8rem);line-height:1.05;margin:0 0 .5em;text-wrap:balance;}
   .opening-sub{font-size:1.05rem;color:var(--ink-soft);max-width:42ch;margin:0 auto 1.3em;}
   .opening-actions{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;margin-bottom:22px;}
   .opening-actions .btn{width:100%;max-width:320px;}
@@ -169,7 +171,7 @@
     padding:6px 10px;border-radius:999px;font-size:.72rem;font-weight:700;
     color:var(--ink);box-shadow:var(--shadow);
   }
-  .opening-badge .dot{width:6px;height:6px;border-radius:50%;background:var(--pink);flex-shrink:0;}
+  .opening-badge .dot{width:6px;height:6px;border-radius:50%;background:var(--destaque);flex-shrink:0;}
 
   @media (min-width:821px){
     .opening{height:100vh;min-height:640px;display:flex;align-items:center;overflow:hidden;}
@@ -212,15 +214,15 @@
   .card-body h3{font-size:1.2rem;margin-bottom:.35em;}
   .card-body p{color:var(--ink-soft);font-size:.96rem;margin:0;}
   .card-icon{
-    width:52px;height:52px;border-radius:50%;background:var(--pink);
+    width:52px;height:52px;border-radius:50%;background:var(--destaque);
     display:flex;align-items:center;justify-content:center;flex-shrink:0;
     margin:24px 0 0 24px;color:var(--ink);
   }
   .card-icon svg{width:26px;height:26px;}
-  .card.card-text.teal .card-icon{background:var(--teal);}
+  .card-icon.cor-principal{background:var(--principal);}
   .card-text .card-body{padding:14px 24px 26px;}
 
-  /* Estrutura de hospital (fundo com fechamento.webp) */
+  /* Estrutura (fundo com imagem de fechamento) */
   .estrutura-section{position:relative;overflow:hidden;padding:64px 0 40px;}
   .estrutura-bg{position:absolute;inset:0;z-index:0;}
   .estrutura-bg img{width:100%;height:100%;object-fit:cover;display:block;}
@@ -237,14 +239,14 @@
   .estrutura-cta{text-align:center;margin-top:36px;}
 
   @media (min-width:701px){
-    .petshop-grid{grid-template-columns:repeat(6,1fr);}
-    .petshop-grid .card:nth-child(1),
-    .petshop-grid .card:nth-child(2),
-    .petshop-grid .card:nth-child(3){grid-column:span 2;}
-    .petshop-grid .card:nth-child(4){grid-column:2 / span 2;}
-    .petshop-grid .card:nth-child(5){grid-column:4 / span 2;}
+    .petshop-grid-5{grid-template-columns:repeat(6,1fr);}
+    .petshop-grid-5 .card:nth-child(1),
+    .petshop-grid-5 .card:nth-child(2),
+    .petshop-grid-5 .card:nth-child(3){grid-column:span 2;}
+    .petshop-grid-5 .card:nth-child(4){grid-column:2 / span 2;}
+    .petshop-grid-5 .card:nth-child(5){grid-column:4 / span 2;}
   }
-  .petshop-grid .card-body p{color:var(--ink);font-size:1.02rem;}
+  #petshop .card-body p{color:var(--ink);font-size:1.02rem;}
 
   /* Contato / como chegar */
   .contact-section{background:var(--cream-2);}
@@ -261,8 +263,10 @@
   footer{background:var(--ink);color:var(--cream);padding:50px 0 30px;}
   .footer-inner{display:grid;gap:28px;grid-template-columns:1fr;}
   @media (min-width:700px){ .footer-inner{grid-template-columns:1.3fr 1fr 1fr;} }
-  .footer-logo{height:64px;width:auto;}
-  footer h4{font-family:'Inter',sans-serif;font-size:.8rem;text-transform:uppercase;letter-spacing:.08em;color:var(--pink);margin:0 0 10px;}
+  .footer-brand{display:flex;align-items:center;gap:10px;}
+  .footer-brand .brand-icon{height:40px;width:40px;}
+  .footer-brand .brand-name{color:var(--cream);}
+  footer h4{font-family:'Inter',sans-serif;font-size:.8rem;text-transform:uppercase;letter-spacing:.08em;color:var(--destaque);margin:0 0 10px;}
   footer p, footer a{color:rgba(250,243,230,0.85);font-size:.95rem;}
   footer a:hover{color:#fff;text-decoration:underline;}
   footer a.icon-link{display:inline-flex;align-items:center;gap:7px;}
@@ -281,12 +285,12 @@
   }
   .float-wa-wrap.is-visible{opacity:1;visibility:visible;transform:translateY(0);}
   .float-wa{
-    width:60px;height:60px;border-radius:50%;background:var(--teal-dark);
+    width:60px;height:60px;border-radius:50%;background:var(--principal-dark);
     display:flex;align-items:center;justify-content:center;flex-shrink:0;
     box-shadow:0 10px 24px rgba(1,127,128,0.45);
   }
   .float-wa svg{width:30px;height:30px;}
-  .float-wa:hover{background:var(--teal-darker);}
+  .float-wa:hover{background:var(--principal-darker);}
   .float-balloon{
     position:relative;background:#fff;color:var(--ink);
     padding:10px 30px 10px 14px;border-radius:12px;box-shadow:var(--shadow);
@@ -306,100 +310,61 @@
 <body>
 
 <header class="site-header">
-  <div class="header-inner">
-    <a href="#top" class="brand" aria-label="Unipett - Hospital Veterinário 24h">
-      <img src="/assets/logo.webp" alt="Unipett - Hospital Veterinário 24h" width="400" height="360" class="brand-logo">
-    </a>
-    <a class="header-emergency" href="tel:+5592984038779">Emergência 24h: (92) 98403-8779</a>
+  <div class="demo-banner" id="demo-banner">Site de demonstração</div>
+  <div class="header-main">
+    <div class="header-inner">
+      <a href="#top" class="brand" aria-label="Página inicial">
+        <svg class="brand-icon" viewBox="0 0 48 48" aria-hidden="true">
+          <ellipse cx="24" cy="31" rx="13" ry="10.5" fill="var(--principal)"/>
+          <circle cx="11" cy="16" r="5.2" fill="var(--destaque)"/>
+          <circle cx="20.5" cy="9" r="5.6" fill="var(--destaque)"/>
+          <circle cx="27.5" cy="9" r="5.6" fill="var(--destaque)"/>
+          <circle cx="37" cy="16" r="5.2" fill="var(--destaque)"/>
+        </svg>
+        <span class="brand-name" id="brand-name">Clínica Pet Vida</span>
+      </a>
+      <a class="header-emergency" id="header-emergency" href="tel:+5500000000000">Emergência: (00) 00000-0000</a>
+    </div>
   </div>
 </header>
 
 <main id="top">
 
   <!-- OPENING -->
-  <section class="opening" id="opening" aria-label="Apresentação da Unipett">
+  <section class="opening" id="opening" aria-label="Apresentação">
     <div class="opening-media">
-      <video muted loop playsinline autoplay poster="/assets/abertura.webp" aria-hidden="true">
-        <source src="/assets/abertura-desktop.mp4" type="video/mp4" media="(min-width: 821px)">
-        <source src="/assets/abertura-mobile.mp4" type="video/mp4">
+      <video id="opening-video" muted loop playsinline autoplay aria-hidden="true">
+        <source id="opening-source-desktop" type="video/mp4" media="(min-width: 821px)">
+        <source id="opening-source-mobile" type="video/mp4">
       </video>
-      <img src="/assets/abertura.webp" alt="Criança abraçando um filhote de golden retriever ao lado de um gato laranja" width="1920" height="1080" class="opening-static-img">
+      <img id="opening-static-img" src="" alt="" width="1920" height="1080" class="opening-static-img">
       <div class="opening-gradient" aria-hidden="true"></div>
     </div>
     <div class="opening-content">
-      <h1>Seu pet cuidado a qualquer hora. Dia e noite, 24h.</h1>
-      <p class="opening-sub">Hospital veterinário 24 horas no Coroado, em Manaus. Emergência, internação, banco de sangue, vacinas e petshop completo no mesmo endereço.</p>
+      <h1 id="opening-title"></h1>
+      <p class="opening-sub" id="opening-sub"></p>
       <div class="opening-actions">
-        <a class="btn btn-primary"
-           href="https://wa.me/5592984038779?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Unipett%20e%20gostaria%20de%20atendimento."
-           target="_blank" rel="noopener">Chamar no WhatsApp</a>
+        <a class="btn btn-primary" id="opening-cta" target="_blank" rel="noopener"></a>
       </div>
-      <ul class="opening-badges">
-        <li class="opening-badge"><span class="dot" aria-hidden="true"></span>Hospital veterinário</li>
-        <li class="opening-badge"><span class="dot" aria-hidden="true"></span>Aberto 24h</li>
-        <li class="opening-badge"><span class="dot" aria-hidden="true"></span>Banco de sangue</li>
-        <li class="opening-badge"><span class="dot" aria-hidden="true"></span>Petshop</li>
-      </ul>
+      <ul class="opening-badges" id="opening-badges"></ul>
     </div>
   </section>
 
   <!-- ESTRUTURA -->
   <section class="section estrutura-section" id="estrutura">
     <div class="estrutura-bg" aria-hidden="true">
-      <img src="/assets/fechamento.webp" alt="" width="1600" height="900" loading="lazy">
+      <img id="estrutura-bg-img" src="" alt="" width="1600" height="900" loading="lazy">
     </div>
     <div class="wrap">
       <div class="section-title">
-        <h2>Hospital, emergência e petshop no mesmo endereço</h2>
-        <p>24 horas por dia, todos os dias, inclusive feriados.</p>
+        <h2 id="estrutura-title"></h2>
+        <p id="estrutura-sub"></p>
       </div>
 
-      <div class="grid estrutura-grid">
-        <article class="card card-text">
-          <div class="card-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="2 12 6 12 9 3 15 21 18 12 22 12"/></svg>
-          </div>
-          <div class="card-body">
-            <h3>Emergência 24h</h3>
-            <p>Toda hora é hora de levar seu pet se algo não estiver bem. Nossa equipe está de prontidão 24 horas, todos os dias, inclusive feriados.</p>
-          </div>
-        </article>
-
-        <article class="card card-text teal">
-          <div class="card-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="4.3"/><circle cx="12" cy="12" r="1.2" fill="currentColor" stroke="none"/><line x1="12" y1="3.8" x2="12" y2="6.2"/><line x1="12" y1="17.8" x2="12" y2="20.2"/><line x1="3.8" y1="12" x2="6.2" y2="12"/><line x1="17.8" y1="12" x2="20.2" y2="12"/><line x1="6.3" y1="6.3" x2="7.9" y2="7.9"/><line x1="16.1" y1="16.1" x2="17.7" y2="17.7"/><line x1="17.7" y1="6.3" x2="16.1" y2="7.9"/><line x1="7.9" y1="16.1" x2="6.3" y2="17.7"/></svg>
-          </div>
-          <div class="card-body">
-            <h3>Doenças virais</h3>
-            <p>Diagnóstico e tratamento de cinomose, parvovirose e outras doenças virais, com estrutura para internação e acompanhamento intensivo.</p>
-          </div>
-        </article>
-
-        <article class="card card-text">
-          <div class="card-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M12 3c3.3 4.7 6.2 8.4 6.2 11.7A6.2 6.2 0 1 1 5.8 14.7C5.8 11.4 8.7 7.7 12 3z"/></svg>
-          </div>
-          <div class="card-body">
-            <h3>Banco de sangue</h3>
-            <p>Bolsas de sangue disponíveis para transfusão na hora da emergência — um diferencial que pode salvar a vida do seu pet.</p>
-          </div>
-        </article>
-
-        <article class="card card-text teal">
-          <div class="card-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="19.5" y1="2.5" x2="22" y2="5"/><line x1="17" y1="5" x2="20" y2="8"/><rect x="9.5" y="9.5" width="8.5" height="5.5" rx="1" transform="rotate(45 13.75 12.25)"/><line x1="14" y1="8" x2="16" y2="10"/><line x1="11" y1="11" x2="13" y2="13"/><line x1="9" y1="15" x2="4" y2="20"/><line x1="4" y1="18" x2="6" y2="20"/><line x1="2" y1="20" x2="4" y2="22"/></svg>
-          </div>
-          <div class="card-body">
-            <h3>Vacinação</h3>
-            <p>Protocolo completo de vacinas para cães e gatos, com carteirinha em dia e lembrete da próxima dose.</p>
-          </div>
-        </article>
-      </div>
+      <div class="grid estrutura-grid" id="estrutura-grid"></div>
 
       <div class="estrutura-cta">
-        <a class="btn btn-primary"
-           href="https://wa.me/5592984038779?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Unipett%20e%20gostaria%20de%20atendimento."
-           target="_blank" rel="noopener">Chamar no WhatsApp</a>
+        <a class="btn btn-primary" id="estrutura-cta-btn" target="_blank" rel="noopener"></a>
       </div>
     </div>
   </section>
@@ -408,51 +373,11 @@
   <section class="section" id="petshop">
     <div class="wrap">
       <div class="section-title">
-        <h2>Petshop e cuidados</h2>
-        <p>Tudo para o dia a dia do seu pet, no mesmo endereço do hospital.</p>
+        <h2 id="petshop-title"></h2>
+        <p id="petshop-sub"></p>
       </div>
 
-      <div class="grid petshop-grid">
-        <article class="card">
-          <img src="/assets/banho-tosa.webp" alt="Cão da raça maltês enrolado em toalha macia após o banho" width="800" height="598" loading="lazy">
-          <div class="card-body">
-            <h3>Banho e tosa</h3>
-            <p>Seu pet volta para casa cheiroso, escovado e bem cuidado — sem precisar rodar a cidade atrás de um lugar de confiança.</p>
-          </div>
-        </article>
-
-        <article class="card">
-          <img src="/assets/brinquedos.webp" alt="Bolinhas, corda e pato de pelúcia entre os brinquedos do petshop" width="800" height="598" loading="lazy">
-          <div class="card-body">
-            <h3>Brinquedos</h3>
-            <p>Linha completa de brinquedos para toda hora de brincadeira, já na hora que você vier buscar ou visitar seu pet.</p>
-          </div>
-        </article>
-
-        <article class="card">
-          <img src="/assets/racao.webp" alt="Comedouro com ração seca para cães e gatos" width="800" height="598" loading="lazy">
-          <div class="card-body">
-            <h3>Ração</h3>
-            <p>As principais marcas de ração para cães e gatos, com orientação de quem acompanha a saúde do seu pet de perto.</p>
-          </div>
-        </article>
-
-        <article class="card">
-          <img src="/assets/caminhas.webp" alt="Gato laranja dormindo em caminha felpuda redonda" width="800" height="598" loading="lazy">
-          <div class="card-body">
-            <h3>Caminhas</h3>
-            <p>Caminhas confortáveis para todos os tamanhos e idades, do filhote ao pet mais idoso.</p>
-          </div>
-        </article>
-
-        <article class="card">
-          <img src="/assets/acessorios.webp" alt="Cachorro da raça beagle sentado usando coleira com identificação" width="800" height="598" loading="lazy">
-          <div class="card-body">
-            <h3>Acessórios</h3>
-            <p>Coleiras, guias, comedouros e tudo que seu pet precisa no dia a dia, sem sair do bairro.</p>
-          </div>
-        </article>
-      </div>
+      <div class="grid" id="petshop-grid"></div>
     </div>
   </section>
 
@@ -460,18 +385,14 @@
   <section class="section contact-section" id="contato">
     <div class="wrap">
       <div class="section-title">
-        <h2>Venha até a Unipett ou fale com a gente agora</h2>
+        <h2 id="contato-title"></h2>
       </div>
       <div class="contact-buttons">
-        <a class="btn btn-secondary" target="_blank" rel="noopener"
-           href="https://www.google.com/maps/dir/?api=1&destination=Av.+Cosme+Ferreira%2C+386%2C+Coroado%2C+Manaus">Como chegar</a>
-        <a class="btn btn-primary"
-           href="https://wa.me/5592984038779?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Unipett%20e%20gostaria%20de%20atendimento."
-           target="_blank" rel="noopener">Chamar no WhatsApp</a>
-        <a class="btn btn-outline-teal" id="google-review-btn" target="_blank" rel="noopener"
-           href="https://www.google.com/maps/search/?api=1&query=Unipett%20Hospital%20Veterin%C3%A1rio%2024h%2C%20Av.%20Cosme%20Ferreira%2C%20386%2C%20Coroado%2C%20Manaus%20-%20AM">Ver avaliações no Google</a>
+        <a class="btn btn-secondary" id="contato-mapa" target="_blank" rel="noopener">Como chegar</a>
+        <a class="btn btn-primary" id="contato-whatsapp" target="_blank" rel="noopener"></a>
+        <a class="btn btn-outline" id="google-review-btn" target="_blank" rel="noopener">Ver avaliações no Google</a>
       </div>
-      <p class="contact-note">Aberto 24 horas, todos os dias.</p>
+      <p class="contact-note" id="contato-horario"></p>
     </div>
   </section>
 
@@ -480,66 +401,384 @@
 <footer>
   <div class="wrap footer-inner">
     <div>
-      <img src="/assets/logo.webp" alt="Unipett - Hospital Veterinário 24h" width="400" height="360" class="footer-logo" loading="lazy">
-      <p style="margin-top:14px;">Emergência, banco de sangue e petshop completo no Coroado, Manaus.</p>
+      <div class="footer-brand">
+        <svg class="brand-icon" viewBox="0 0 48 48" aria-hidden="true">
+          <ellipse cx="24" cy="31" rx="13" ry="10.5" fill="var(--principal)"/>
+          <circle cx="11" cy="16" r="5.2" fill="var(--destaque)"/>
+          <circle cx="20.5" cy="9" r="5.6" fill="var(--destaque)"/>
+          <circle cx="27.5" cy="9" r="5.6" fill="var(--destaque)"/>
+          <circle cx="37" cy="16" r="5.2" fill="var(--destaque)"/>
+        </svg>
+        <span class="brand-name" id="footer-brand-name"></span>
+      </div>
+      <p style="margin-top:14px;" id="footer-slogan"></p>
     </div>
     <div>
       <h4>Contato</h4>
-      <p><a href="tel:+5592984038779">(92) 98403-8779</a></p>
-      <p><a class="icon-link" href="https://wa.me/5592984038779" target="_blank" rel="noopener">
+      <p><a id="footer-telefone" href="tel:"></a></p>
+      <p><a class="icon-link" id="footer-whatsapp" target="_blank" rel="noopener">
         <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.87.5 3.63 1.44 5.15L2 22l5.1-1.53a9.8 9.8 0 0 0 4.94 1.33h.01c5.46 0 9.9-4.45 9.9-9.91C21.96 6.45 17.5 2 12.04 2zm5.8 14.08c-.24.68-1.4 1.3-1.95 1.38-.5.08-1.12.11-1.8-.11-.42-.13-.95-.3-1.64-.59-2.88-1.24-4.76-4.14-4.9-4.33-.14-.19-1.17-1.56-1.17-2.97 0-1.41.74-2.1 1-2.39.26-.29.57-.36.76-.36.19 0 .38 0 .55.01.17.01.41-.07.64.49.24.58.81 1.99.88 2.13.07.14.12.31.02.5-.1.19-.15.31-.29.48-.14.17-.3.37-.43.5-.14.14-.29.29-.12.57.17.29.76 1.26 1.63 2.04 1.12 1 2.07 1.31 2.36 1.46.29.14.46.12.63-.07.17-.19.73-.85.93-1.14.19-.29.38-.24.64-.14.26.1 1.65.78 1.93.92.29.14.48.21.55.33.07.12.07.69-.17 1.37z"/></svg>
-        WhatsApp
+        <span>WhatsApp</span>
       </a></p>
-      <p><a class="icon-link" href="https://instagram.com/unipett24h" target="_blank" rel="noopener">
+      <p><a class="icon-link" id="footer-instagram" target="_blank" rel="noopener">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
-        @unipett24h
+        <span id="footer-instagram-text"></span>
       </a></p>
     </div>
     <div>
       <h4>Endereço e horário</h4>
-      <p>Av. Cosme Ferreira, 386 – Coroado<br>Manaus/AM, CEP 69082-230<br>(em frente à Fiat Murano)</p>
-      <p>Aberto 24h, todos os dias</p>
+      <p id="footer-endereco"></p>
+      <p id="footer-horario"></p>
     </div>
   </div>
   <div class="footer-bottom">
-    <span id="footer-year">© Unipett</span>
+    <span id="footer-copyright"></span>
   </div>
 </footer>
 
 <div class="float-wa-wrap" id="float-wa-wrap">
   <div class="float-balloon" id="float-balloon">
-    Emergência? Fale agora
+    <span id="float-balloon-text"></span>
     <button type="button" class="float-balloon-close" id="float-balloon-close" aria-label="Fechar aviso">&times;</button>
   </div>
-  <a class="float-wa" aria-label="Chamar no WhatsApp"
-     href="https://wa.me/5592984038779?text=Ol%C3%A1!%20Preciso%20de%20atendimento%20para%20o%20meu%20pet."
-     target="_blank" rel="noopener">
+  <a class="float-wa" id="float-wa-btn" aria-label="Chamar no WhatsApp" target="_blank" rel="noopener">
     <svg viewBox="0 0 24 24" fill="#fff" aria-hidden="true">
       <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.87.5 3.63 1.44 5.15L2 22l5.1-1.53a9.8 9.8 0 0 0 4.94 1.33h.01c5.46 0 9.9-4.45 9.9-9.91C21.96 6.45 17.5 2 12.04 2zm5.8 14.08c-.24.68-1.4 1.3-1.95 1.38-.5.08-1.12.11-1.8-.11-.42-.13-.95-.3-1.64-.59-2.88-1.24-4.76-4.14-4.9-4.33-.14-.19-1.17-1.56-1.17-2.97 0-1.41.74-2.1 1-2.39.26-.29.57-.36.76-.36.19 0 .38 0 .55.01.17.01.41-.07.64.49.24.58.81 1.99.88 2.13.07.14.12.31.02.5-.1.19-.15.31-.29.48-.14.17-.3.37-.43.5-.14.14-.29.29-.12.57.17.29.76 1.26 1.63 2.04 1.12 1 2.07 1.31 2.36 1.46.29.14.46.12.63-.07.17-.19.73-.85.93-1.14.19-.29.38-.24.64-.14.26.1 1.65.78 1.93.92.29.14.48.21.55.33.07.12.07.69-.17 1.37z"/>
     </svg>
   </a>
 </div>
 
+<script src="/config.js"></script>
 <script>
 (function(){
   "use strict";
 
-  /* ---------- Nota do Google ---------- */
-  var NOTA_GOOGLE = "";
-  var TOTAL_AVALIACOES = "";
+  var ICONS = {
+    pulso: '<polyline points="2 12 6 12 9 3 15 21 18 12 22 12"/>',
+    virus: '<circle cx="12" cy="12" r="4.3"/><circle cx="12" cy="12" r="1.2" fill="currentColor" stroke="none"/><line x1="12" y1="3.8" x2="12" y2="6.2"/><line x1="12" y1="17.8" x2="12" y2="20.2"/><line x1="3.8" y1="12" x2="6.2" y2="12"/><line x1="17.8" y1="12" x2="20.2" y2="12"/><line x1="6.3" y1="6.3" x2="7.9" y2="7.9"/><line x1="16.1" y1="16.1" x2="17.7" y2="17.7"/><line x1="17.7" y1="6.3" x2="16.1" y2="7.9"/><line x1="7.9" y1="16.1" x2="6.3" y2="17.7"/>',
+    gota: '<path d="M12 3c3.3 4.7 6.2 8.4 6.2 11.7A6.2 6.2 0 1 1 5.8 14.7C5.8 11.4 8.7 7.7 12 3z"/>',
+    seringa: '<line x1="19.5" y1="2.5" x2="22" y2="5"/><line x1="17" y1="5" x2="20" y2="8"/><rect x="9.5" y="9.5" width="8.5" height="5.5" rx="1" transform="rotate(45 13.75 12.25)"/><line x1="14" y1="8" x2="16" y2="10"/><line x1="11" y1="11" x2="13" y2="13"/><line x1="9" y1="15" x2="4" y2="20"/><line x1="4" y1="18" x2="6" y2="20"/><line x1="2" y1="20" x2="4" y2="22"/>',
+    internacao: '<path d="M3 18v-5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v5"/><path d="M3 18h18"/><path d="M5 11V8a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3"/><circle cx="7.5" cy="8.5" r="1"/>'
+  };
 
-  var reviewBtn = document.getElementById("google-review-btn");
-  if (reviewBtn && NOTA_GOOGLE && TOTAL_AVALIACOES) {
-    reviewBtn.textContent = "Ver avaliações no Google · " + NOTA_GOOGLE + " ★ (" + TOTAL_AVALIACOES + ")";
+  var ICON_ORDER = ["emergencia24h", "internacao", "doencasVirais", "bancoSangue", "vacinacao"];
+  var FOTO_ORDER = ["banhoTosa", "brinquedos", "racao", "caminhas", "acessorios"];
+
+  function clampText(s, max){
+    s = (s == null ? "" : String(s)).trim();
+    if (s.length > max) s = s.slice(0, max);
+    return s;
   }
 
-  /* ---------- Ano no rodapé ---------- */
-  var yearEl = document.getElementById("footer-year");
-  if (yearEl) {
-    yearEl.textContent = "© " + new Date().getFullYear() + " Unipett – Hospital Veterinário 24h. Todos os direitos reservados.";
+  function getParam(name){
+    try {
+      var params = new URLSearchParams(window.location.search);
+      return params.get(name);
+    } catch (e) { return null; }
   }
 
-  /* ---------- Abertura (vídeo) ---------- */
+  function isPlainObject(v){
+    return v && typeof v === "object" && !Array.isArray(v);
+  }
+
+  function deepMerge(base, override){
+    var out = {};
+    var k;
+    for (k in base) out[k] = base[k];
+    if (override) {
+      for (k in override) {
+        if (isPlainObject(override[k]) && isPlainObject(base[k])) {
+          out[k] = deepMerge(base[k], override[k]);
+        } else {
+          out[k] = override[k];
+        }
+      }
+    }
+    return out;
+  }
+
+  function buildEffectiveConfig(){
+    var cfg = deepMerge(CONFIG, {});
+
+    var tipoParam = getParam("tipo");
+    if (tipoParam === "hospital" || tipoParam === "petshop") {
+      cfg.tipo = tipoParam;
+    }
+    if (CONFIG_OVERRIDES_POR_TIPO[cfg.tipo]) {
+      cfg = deepMerge(cfg, CONFIG_OVERRIDES_POR_TIPO[cfg.tipo]);
+    }
+
+    var clinica = getParam("clinica");
+    if (clinica) cfg.nome = clampText(clinica, 40) || cfg.nome;
+
+    var cidade = getParam("cidade");
+    if (cidade) {
+      cfg.endereco = deepMerge(cfg.endereco, { cidade: clampText(cidade, 40) || cfg.endereco.cidade });
+    }
+
+    var cor = getParam("cor");
+    if (cor && PALETTES[cor]) cfg.corPaleta = cor;
+
+    return cfg;
+  }
+
+  function fillTokens(str, cfg){
+    return String(str || "")
+      .split("{nome}").join(cfg.nome)
+      .split("{cidade}").join(cfg.endereco.cidade);
+  }
+
+  function setText(id, text){
+    var node = document.getElementById(id);
+    if (node) node.textContent = text;
+  }
+
+  function waLink(numeroDigits, mensagem){
+    return "https://wa.me/" + numeroDigits + "?text=" + encodeURIComponent(mensagem);
+  }
+
+  function buildCard(opts){
+    // opts: {cor, iconSvg, imgSrc, imgAlt, titulo, descricao}
+    var card = document.createElement("article");
+    if (opts.imgSrc) {
+      card.className = "card";
+      var img = document.createElement("img");
+      img.src = opts.imgSrc;
+      img.alt = opts.imgAlt || "";
+      img.width = 800; img.height = 598; img.loading = "lazy";
+      card.appendChild(img);
+    } else {
+      card.className = "card card-text";
+      var iconWrap = document.createElement("div");
+      iconWrap.className = "card-icon" + (opts.cor === "principal" ? " cor-principal" : "");
+      iconWrap.setAttribute("aria-hidden", "true");
+      var svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+      svg.setAttribute("viewBox", "0 0 24 24");
+      svg.setAttribute("fill", "none");
+      svg.setAttribute("stroke", "currentColor");
+      svg.setAttribute("stroke-width", "1.8");
+      svg.setAttribute("stroke-linecap", "round");
+      svg.setAttribute("stroke-linejoin", "round");
+      svg.innerHTML = opts.iconSvg || "";
+      iconWrap.appendChild(svg);
+      card.appendChild(iconWrap);
+    }
+    var body = document.createElement("div");
+    body.className = "card-body";
+    var h3 = document.createElement("h3");
+    h3.textContent = opts.titulo;
+    var p = document.createElement("p");
+    p.textContent = opts.descricao;
+    body.appendChild(h3);
+    body.appendChild(p);
+    card.appendChild(body);
+    return card;
+  }
+
+  function render(cfg){
+    var pal = PALETTES[cfg.corPaleta] || PALETTES.verde;
+    var tipo = cfg.tipo === "petshop" ? "petshop" : "hospital";
+
+    // ---- cores ----
+    var rootStyle = document.documentElement.style;
+    rootStyle.setProperty("--principal", pal.principal);
+    rootStyle.setProperty("--principal-dark", pal.principalDark);
+    rootStyle.setProperty("--principal-darker", pal.principalDarker);
+    rootStyle.setProperty("--destaque", pal.destaque);
+    rootStyle.setProperty("--destaque-dark", pal.destaqueDark);
+    rootStyle.setProperty("--destaque-darker", pal.destaqueDarker);
+
+    // ---- faixa demo + topo ----
+    setText("demo-banner", cfg.faixaDemo);
+    setText("brand-name", cfg.nome);
+    var headerEmergency = document.getElementById("header-emergency");
+    if (headerEmergency) {
+      headerEmergency.textContent = "Emergência: " + cfg.telefone;
+      headerEmergency.href = cfg.telefoneLink;
+    }
+
+    // ---- título da aba / meta / JSON-LD ----
+    var tipoLabel = tipo === "petshop" ? "Petshop e banho e tosa" : "Hospital Veterinário";
+    document.title = cfg.nome + " | " + tipoLabel + " em " + cfg.endereco.cidade;
+    var metaDesc = document.querySelector('meta[name="description"]');
+    var descTxt = fillTokens(cfg.abertura[tipo].subtitulo, cfg);
+    if (metaDesc) metaDesc.setAttribute("content", descTxt);
+    var ogTitle = document.querySelector('meta[property="og:title"]');
+    if (ogTitle) ogTitle.setAttribute("content", cfg.nome + " | " + tipoLabel);
+    var ogDesc = document.querySelector('meta[property="og:description"]');
+    if (ogDesc) ogDesc.setAttribute("content", descTxt);
+
+    var jsonldEl = document.getElementById("jsonld");
+    if (jsonldEl) {
+      var enderecoLinha = cfg.endereco.rua;
+      var jsonld = {
+        "@context": "https://schema.org",
+        "@type": tipo === "petshop" ? "PetStore" : "VeterinaryCare",
+        "name": cfg.nome,
+        "description": descTxt,
+        "telephone": cfg.telefoneLink.replace("tel:", ""),
+        "priceRange": "$$",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": enderecoLinha,
+          "addressLocality": cfg.endereco.cidade,
+          "addressRegion": cfg.endereco.estado,
+          "addressCountry": "BR"
+        },
+        "openingHoursSpecification": [{
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+          "opens": "00:00",
+          "closes": "23:59"
+        }],
+        "sameAs": [cfg.instagramLink]
+      };
+      jsonldEl.textContent = JSON.stringify(jsonld);
+    }
+
+    // ---- abertura ----
+    var abertura = cfg.abertura[tipo];
+    var mensagem = fillTokens(abertura.mensagemWhatsapp, cfg);
+    var link = waLink(cfg.whatsapp, mensagem);
+
+    var video = document.getElementById("opening-video");
+    if (video) video.setAttribute("poster", cfg.video.poster);
+    var srcDesktop = document.getElementById("opening-source-desktop");
+    if (srcDesktop) srcDesktop.src = cfg.video.desktop;
+    var srcMobile = document.getElementById("opening-source-mobile");
+    if (srcMobile) srcMobile.src = cfg.video.mobile;
+    if (video) video.load();
+    var staticImg = document.getElementById("opening-static-img");
+    if (staticImg) { staticImg.src = cfg.video.poster; staticImg.alt = cfg.video.alt; }
+
+    setText("opening-title", fillTokens(abertura.titulo, cfg));
+    setText("opening-sub", fillTokens(abertura.subtitulo, cfg));
+    var ctaBtn = document.getElementById("opening-cta");
+    if (ctaBtn) { ctaBtn.textContent = abertura.botaoPrincipal; ctaBtn.href = link; }
+
+    var badgesEl = document.getElementById("opening-badges");
+    if (badgesEl) {
+      badgesEl.innerHTML = "";
+      (cfg.selos[tipo] || []).forEach(function (texto) {
+        var li = document.createElement("li");
+        li.className = "opening-badge";
+        var dot = document.createElement("span");
+        dot.className = "dot";
+        dot.setAttribute("aria-hidden", "true");
+        li.appendChild(dot);
+        li.appendChild(document.createTextNode(texto));
+        badgesEl.appendChild(li);
+      });
+    }
+
+    // ---- estrutura ----
+    setText("estrutura-title", fillTokens(cfg.estrutura[tipo].titulo, cfg));
+    setText("estrutura-sub", fillTokens(cfg.estrutura[tipo].subtitulo, cfg));
+    var estruturaBgImg = document.getElementById("estrutura-bg-img");
+    if (estruturaBgImg) { estruturaBgImg.src = cfg.imagemFechamento.src; estruturaBgImg.alt = ""; }
+
+    var estruturaGrid = document.getElementById("estrutura-grid");
+    var estruturaSection = document.getElementById("estrutura");
+    if (estruturaGrid) {
+      estruturaGrid.innerHTML = "";
+      var visibleIcon = 0;
+      ICON_ORDER.forEach(function (id) {
+        if (!cfg.servicos[id]) return;
+        var item = CATALOGO_SERVICOS[id];
+        if (!item) return;
+        visibleIcon++;
+        estruturaGrid.appendChild(buildCard({
+          cor: item.cor,
+          iconSvg: ICONS[item.icone],
+          titulo: item.titulo,
+          descricao: item.descricao
+        }));
+      });
+      if (estruturaSection) estruturaSection.style.display = visibleIcon ? "" : "none";
+    }
+    var estruturaCta = document.getElementById("estrutura-cta-btn");
+    if (estruturaCta) { estruturaCta.textContent = abertura.botaoPrincipal; estruturaCta.href = link; }
+
+    // ---- petshop ----
+    var petshopSection = document.getElementById("petshop");
+    if (petshopSection) {
+      if (!cfg.servicos.petshop) {
+        petshopSection.style.display = "none";
+      } else {
+        petshopSection.style.display = "";
+        setText("petshop-title", fillTokens(cfg.petshopSecao[tipo].titulo, cfg));
+        setText("petshop-sub", fillTokens(cfg.petshopSecao[tipo].subtitulo, cfg));
+        var petshopGrid = document.getElementById("petshop-grid");
+        petshopGrid.innerHTML = "";
+        petshopGrid.classList.remove("petshop-grid-5");
+        var visibleFoto = 0;
+        FOTO_ORDER.forEach(function (id) {
+          if (!cfg.servicos[id]) return;
+          var item = CATALOGO_SERVICOS[id];
+          if (!item) return;
+          visibleFoto++;
+          petshopGrid.appendChild(buildCard({
+            imgSrc: item.imagem,
+            imgAlt: item.alt,
+            titulo: item.titulo,
+            descricao: item.descricao
+          }));
+        });
+        if (visibleFoto === 5) petshopGrid.classList.add("petshop-grid-5");
+        if (visibleFoto === 0) petshopSection.style.display = "none";
+      }
+    }
+
+    // ---- contato ----
+    setText("contato-title", fillTokens(cfg.contatoTitulo, cfg));
+    var mapaBtn = document.getElementById("contato-mapa");
+    if (mapaBtn) mapaBtn.href = cfg.mapsLink;
+    var waBtn = document.getElementById("contato-whatsapp");
+    if (waBtn) { waBtn.textContent = abertura.botaoPrincipal; waBtn.href = link; }
+    var reviewBtn = document.getElementById("google-review-btn");
+    if (reviewBtn) {
+      reviewBtn.href = cfg.avaliacoesLink;
+      reviewBtn.textContent = (cfg.notaGoogle && cfg.totalAvaliacoes)
+        ? "Ver avaliações no Google · " + cfg.notaGoogle + " ★ (" + cfg.totalAvaliacoes + ")"
+        : "Ver avaliações no Google";
+    }
+    setText("contato-horario", cfg.horario + ".");
+
+    // ---- rodapé ----
+    setText("footer-brand-name", cfg.nome);
+    setText("footer-slogan", cfg.slogan);
+    var footerTel = document.getElementById("footer-telefone");
+    if (footerTel) { footerTel.textContent = cfg.telefone; footerTel.href = cfg.telefoneLink; }
+    var footerWa = document.getElementById("footer-whatsapp");
+    if (footerWa) footerWa.href = waLink(cfg.whatsapp, mensagem);
+    var footerInsta = document.getElementById("footer-instagram");
+    if (footerInsta) footerInsta.href = cfg.instagramLink;
+    setText("footer-instagram-text", cfg.instagram);
+
+    var enderecoTexto = cfg.endereco.rua + " – " + cfg.endereco.bairro +
+      "\n" + cfg.endereco.cidade + "/" + cfg.endereco.estado +
+      (cfg.endereco.cep ? ", CEP " + cfg.endereco.cep : "");
+    var footerEndereco = document.getElementById("footer-endereco");
+    if (footerEndereco) {
+      footerEndereco.innerHTML = "";
+      enderecoTexto.split("\n").forEach(function (linha, i) {
+        if (i > 0) footerEndereco.appendChild(document.createElement("br"));
+        footerEndereco.appendChild(document.createTextNode(linha));
+      });
+    }
+    setText("footer-horario", cfg.horario);
+    setText("footer-copyright", "© " + new Date().getFullYear() + " " + cfg.nome + ". Todos os direitos reservados.");
+
+    // ---- botão flutuante ----
+    var floatBtn = document.getElementById("float-wa-btn");
+    if (floatBtn) floatBtn.href = waLink(cfg.whatsapp, mensagem);
+    setText("float-balloon-text", cfg.balaoFlutuante[tipo]);
+  }
+
+  var cfg = buildEffectiveConfig();
+  render(cfg);
+
+  /* ---------- Reduced motion ---------- */
   var prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   if (prefersReduced) {
     document.documentElement.classList.add("reduced-motion");
@@ -557,16 +796,16 @@
     var balloonDismissed = false;
     var isMobileView = window.matchMedia("(max-width: 820px)").matches;
 
-    function maybeShowBalloon(){
+    var maybeShowBalloon = function () {
       if (balloonShown || balloonDismissed || !balloon) return;
       balloonShown = true;
       balloon.classList.add("is-shown");
       if (isMobileView) {
-        setTimeout(function(){ balloon.classList.remove("is-shown"); }, 6000);
+        setTimeout(function () { balloon.classList.remove("is-shown"); }, 6000);
       }
-    }
+    };
 
-    function checkFloatVisibility(){
+    var checkFloatVisibility = function () {
       var threshold = openingEl.getBoundingClientRect().bottom;
       var shouldShow = threshold <= 0;
       if (shouldShow && !shown) {
@@ -577,13 +816,13 @@
         shown = false;
         floatWrap.classList.remove("is-visible");
       }
-    }
+    };
 
     window.addEventListener("scroll", checkFloatVisibility, { passive: true });
     checkFloatVisibility();
 
     if (balloonClose) {
-      balloonClose.addEventListener("click", function(){
+      balloonClose.addEventListener("click", function () {
         balloonDismissed = true;
         balloon.classList.remove("is-shown");
       });

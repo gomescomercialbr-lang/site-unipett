@@ -6,3 +6,6 @@ package.json
 
 .vercel
 .env*
+
+_clientes/
+proposta/
